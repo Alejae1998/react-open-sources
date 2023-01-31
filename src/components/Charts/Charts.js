@@ -1,8 +1,10 @@
-import { VictoryChart, VictoryBar, VictoryTheme } from 'victory';
+import React from 'react';
+import { VictoryBar, VictoryChart, VictoryTheme } from 'victory';
+import './Charts.css';
 
 const dogBreeds = [
   {
-    breed: 'Labrador Retriever',
+    breed: 'Labrador',
     breedType: 'Purebred',
     origin: 'Canada,USA',
     popularity: '1',
@@ -12,7 +14,7 @@ const dogBreeds = [
     photo: 'https://learnwebcode.github.io/json-example/images/cat-2.jpg',
   },
   {
-    breed: 'German Shepard',
+    breed: 'GermanShepard',
     breedType: 'Purebred',
     origin: 'Germany',
     popularity: '2',
@@ -82,7 +84,7 @@ const dogBreeds = [
     photo: 'https://learnwebcode.github.io/json-example/images/cat-2.jpg',
   },
   {
-    breed: 'German Shorthaired Pointer',
+    breed: 'German',
     breedType: 'Purebred',
     origin: 'Germany',
     popularity: '9',
@@ -92,7 +94,7 @@ const dogBreeds = [
     photo: 'https://learnwebcode.github.io/json-example/images/cat-2.jpg',
   },
   {
-    breed: 'Yorkshire Terrier',
+    breed: 'Yorkshire',
     breedType: 'Purebred',
     origin: 'United Kingdom',
     popularity: '10',
@@ -112,3 +114,14 @@ const dogBreeds = [
     photo: 'https://learnwebcode.github.io/json-example/images/cat-2.jpg',
   },
 ];
+export default function Charts() {
+  return (
+    <div>
+      <h1>Dog Breeds Chart!</h1>
+      <VictoryChart domainPadding={20} width={2000} theme={VictoryTheme.material}>
+        <VictoryBar data={dogBreeds} x="breed" y="popularity" />
+      </VictoryChart>
+      <p className="charts">Y Axis: Popularity of the Breed ------ X Axis: Dog Breed</p>
+    </div>
+  );
+}

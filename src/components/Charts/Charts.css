@@ -1,0 +1,19 @@
+.charts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-top: -10px;
+  margin-bottom: 35px;
+}
+
+container: {
+  flex: 1;
+  justifycontent: center;
+  alignitems: center;
+  backgroundcolor: #f5fcff;
+}
+
+tspan {
+  font-size: 2px;
+}

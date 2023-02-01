@@ -1,5 +1,5 @@
 import { Table, Cell, Column, HeaderCell } from 'rsuite-table';
-import 'rsuite-table/dist/css/rsuite-table.css';
+// import 'rsuite-table/dist/css/rsuite-table.css';
 const dogBreedsTable = [
   {
     breed: 'Labrador',
